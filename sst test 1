@@ -1,0 +1,203 @@
+"""
+qn1:
+
+write a program that adds two numbers prints the sum to STDOUT  .
+read the input from STDIN. the first line of your input will contain
+an integer (N) that tells you how many more lines there are in the
+input each of the subsequent N lines contains 2 integers. you need to
+print the sum of each pair on a separate line of STDOUT.
+
+sample input
+
+3
+1   5
+3   10 
+999   -34343
+
+Sample Output:
+
+6
+13
+-33344
+
+program:
+
+t=int(input())
+for _ in range(t):
+    n,m=map(int,input().split())
+    print(n+m)
+
+
+
+qn2:
+
+Mr Jhon and Mr Javid are best friends, and javid is habbituated to
+read in right to left, write a logic to take a number in jhon point
+of view and print it in Javid perspective
+
+
+
+i/p:
+
+1234
+
+o/p:
+
+4321
+
+program:
+
+n=int(input())
+s=0
+while n!=0:
+    r=n%10
+    s=s*10+r
+    n=n//10
+print(s)
+
+
+qn3;
+
+Given a long integer, we need to find if the difference between sum of odd position digits and sum of even position digits is 0 or not. The indexes start from zero (0 index is for leftmost digit).
+
+Examples:
+
+Input : 1212112
+Output : Yes
+Explanation:-
+the odd position element is 2+2+1=5
+the even position element is 1+1+1+2=5
+the difference is 5-5=0.so print yes.
+
+Input :12345
+Output : No
+Explanation:-
+the odd position element is 1+3+5=9
+the even position element is 2+4=6
+the difference is 9-6=3 not  equal
+to zero. So print no.
+
+program:
+
+n=int(input())  #1212112
+s1=0
+s2=0
+while n!=0:
+    r=n%10  #2
+    n=n//10  #121211
+    s1=s1+r  #2
+    r=n%10  
+    n=n//10
+    s2=s2+r
+s3=abs(s1-s2)
+if s3==0:
+    print("yes")
+else:
+    print("no")
+
+qn4:
+
+find out whether given number is palindrome or not
+
+ palindrome: if given number and its reversed number are the same then its a palindrome
+
+Sample Input1:
+
+234
+
+sample Ouput1:
+
+not palindrome
+
+Sample Input2:
+
+121
+
+sample Ouput2:
+
+palindrome
+
+program:
+
+n=int(input())  #4664
+s=n
+p=0
+while n!=0:
+    r=n%10  #4 6 6 4
+    p=p*10+r  #4 46 466 4664
+    n=n//10  #466 46 4
+if s==p:
+    print("palindrome")
+else:
+    print("not palindrome")
+
+
+qn5:
+
+Write A Program to find the Largest digit in a given number and
+display output as given below.
+
+
+
+Example: 
+Input- 1987
+Output- 9
+
+program;
+
+n=int(input())  #1987  
+d=0
+l=0
+while n!=0:
+    r=n%10  #7  8 9 1
+    d=r  #d=7 8 9 1
+    if d>=l: # true true true
+        l=d  #l=7 8 9
+    
+    n=n//10  #198 19 1
+print(l)
+
+qn6:
+
+Sandhya, a software analyst bought a new split-Ac to her house.
+She was researching her Ac’s temperature limits by increasing and
+decreasing. The table is as follows
+
+Sample Input
+
+Sample Output
+
+>=16 and<=25
+
+very cool
+
+>25 and <=32
+
+cool
+
+>32
+
+no effect
+
+                 
+
+ 
+ 
+Sample input1:
+17
+Sample Output1:
+very cool
+Sample Input 2:
+35
+Sample Output:
+no effect
+
+program:
+
+n=int(input())
+if n>=16 and n<=25:
+    print("very cool")
+elif n>25 and n<=32:
+    print("cool")
+elif n>32:
+    print("no effect")
