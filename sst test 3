@@ -1,0 +1,81 @@
+#to print whether given number is Disarium number or not
+#program
+
+"""
+n=int(input()) #175
+m=n #m=175
+sum=0 
+while n!=0:
+    r=n%10 #r=5 7 1
+    sum=sum*10+r #5 57 571
+    n=n//10 # 17 1 0
+
+d=sum #571
+sum1=0
+c=0
+while d!=0:
+    e=d%10 #1 7
+    c+=1 #1 2
+    sum1=sum1+pow(e,c) #1^1=1 1+7^2
+    
+    d=d//10 #57
+a=sum1
+if m==a:
+    print(m,"Disarium number")
+else:
+    print(m,"not a Disarium number")
+    
+For example, 175 is a Disarium number as follows:
+
+11+ 72 + 53 = 1+ 49 + 125 = 175
+
+Sample Input:
+175
+sample output:
+175 Disarium number
+
+Sample Input:
+346
+Sample Output:
+346 not a Disarium number
+
+"""
+
+# another way of writing the above program
+
+"""
+n=int(input())
+l=[]
+for i in str(n):
+    l.append(int(i))
+s=0
+for i in range(len(l)):
+    s+=pow(l[i],i+1)
+if s==n:
+    print(n,'Disarium number')
+else:
+    print(n,'not a Disarium number')
+
+
+"""
+
+# another way of writing the above program
+
+"""
+#python code
+n=int(input())
+a=n
+s=0
+p=len(str(n))
+#loop for non o and non negative numbers
+while n>0:
+    r=n%10
+    s=s+pow(r,p)
+    n=n//10
+    p-=1
+if s==a:
+    print(a,"Disarium number")
+else:
+    print(a,"not a Disarium number")
+
+"""
