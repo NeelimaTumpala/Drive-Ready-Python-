@@ -1,0 +1,126 @@
+"""
+
+# to check whether in even and odd sequence or not
+n=int(input())#12345
+while(n!=0):
+    r=n%10#5
+    n=n//10#1234
+    break
+if r%2==0:#5%2!=0
+    s="even"
+else:
+    s="odd"#s=odd
+while (n!=0):#n=1234
+    r=n%10#4
+    n=n//10#123
+    if(s=="even" and(r%2==1)):
+        s="odd"
+    elif(s=="odd" and (r%2==0)):#s=odd and 4%2==0 so even
+        s="even"
+    else:
+        print("not a waveform")
+        break
+else:
+    print("waveform")
+
+
+"""
+
+"""
+# another way to check whether numbers are in a sequence or not
+#i.e even-odd or odd-even
+
+num=int(input())
+d=num%10
+num=num//10
+while num:
+    r=num%10
+    num=num//10
+    if (d%2==0 and r%2==0) or (d%2==1 and r%2==1):
+        print("not in a form")
+        break
+    d=r
+else:
+    print("wave form")
+
+
+"""
+"""
+
+sum=0
+a,b=map(int,input().split())
+while a!=0:
+    if a%2!=0:
+        sum=sum+b
+    a=a//2
+    b=b*2
+print(sum)
+
+output:
+
+13 24
+312
+
+"""
+"""      
+n=int(input())
+
+while True:
+    print(n,end=" ")
+    if n==1:
+        break
+    if n%2==0:
+        n=n//2    # if even n=n//2
+    else:
+        n=3*n+1    # if odd n=3*n+1
+    
+output;
+6
+6 3 10 5 16 8 4 2 1
+"""
+"""
+# l.c.m
+a,b=map(int,input().split())
+t=2
+res=1
+while (a>=t or b>=t):
+    if a%t==0 and b%t==0:
+        a=a//t
+        b=b//t
+        res=res*t
+    else:
+        t+=1
+        
+    
+print(res*a*b)
+
+output:
+
+12 26
+156
+
+"""
+
+"""
+# g.c.d
+
+a,b=map(int,input().split())
+t=2
+res=1
+while (a>=t or b>=t):
+    if a%t==0 and b%t==0:
+        a=a//t
+        b=b//t
+        res=res*t
+    else:
+        t+=1
+        
+    
+print(res)
+
+output:
+
+12 24
+12
+
+"""
