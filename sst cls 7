@@ -1,0 +1,157 @@
+# functions
+"""
+
+def lcm(a,b):
+    t=2
+    res=1
+    while True:
+        if a%t==0 and b%t==0:
+            a=a//t
+            b=b//t
+            res=res*t
+        else:
+            t+=1
+        if a<t or b<t:
+            return res*a*b # if return res is mentioned it is gcd and
+                            # if return res*a*b i smentioned it is lcm
+a,b=map(int,input().split())
+print(lcm(a,b))
+
+
+"""
+"""
+
+def gcd(a,b):
+    
+    while True:
+        if a>b:
+            t=a 
+            a=b
+            b=t
+        if a<b:
+            b=b%a
+        if b==0:
+            return(a)
+a,b=map(int,input().split())
+print(gcd(a,b))
+
+"""
+
+
+"""
+
+# we can write above program like this also
+def gcd(a,b):
+    while True:
+        if a>b:
+            a,b=b,a
+        b=b%a
+        if b==0:
+            return a
+a,b=map(int,input().split())
+print(gcd(a,b))
+
+"""
+"""
+def gcd(a,b):
+    if b==0:
+        return a
+    if a>b:
+        a,b=b,a
+    return 1+gcd(a,b%a)
+a,b=map(int,input().split())
+print(gcd(a,b))
+
+"""
+"""
+def ab(a,b):
+    while b!=0:
+        if a>b:
+            a,b=b,a
+        if b>a:
+            b=b%a
+    return a
+        
+a,b=map(int,input().split())
+print(ab(a,b))
+
+
+output:
+
+38 12
+2    
+
+"""
+"""
+a=int(input())
+b=a
+sum=0
+while a!=0:
+    r=a%10
+    sum=sum*10+r
+    a=a//10
+    
+if sum==b:
+    print("Armstrong")
+else:
+    print("not Armstrong")
+"""
+
+"""
+def fact(num):
+    res=0
+    for i in range(1,num+1):
+        if num%i==0:
+            res+=1
+    return res
+
+num=int(input())
+print(fact(num))
+
+
+output:
+100
+9
+
+"""
+"""
+def cprime:
+    for i in range(1,n+1):
+        if n%i==0:
+            c+=1
+    if c==2:
+        print("cprime")
+    else:
+        print("not cprime")
+print()
+"""
+
+# to find armstrong using functions
+
+"""
+def isarmstrong(num):
+    dc=0
+    temp=num
+    while temp:
+        temp=temp//10
+        dc+=1
+    temp=num
+    res=0
+    while temp:
+        r=temp%10
+        temp=temp//10
+        res+=pow(r,dc)
+    return res==num
+num=int(input())
+print(isarmstrong(num))
+
+
+output:
+
+125
+False
+
+153
+True
+"""
+
