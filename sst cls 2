@@ -1,0 +1,265 @@
+"""
+num=int(input())
+while num!=0:
+    r=num%10
+    num=num//10
+    print(r,num)
+output:
+1234
+4 123
+3 12
+2 1
+1 0
+
+
+"""
+
+"""
+num=int(input())
+while num!=0:
+    r=num%10
+    num=num//10
+    print(r)
+output:
+1234
+4 
+3 
+2 
+1
+
+"""
+"""
+
+
+num=int(input())
+while num!=0:
+    r=num%10
+    num=num//10
+print(num)
+
+output:
+0
+
+"""
+"""
+c=0
+num=int(input())
+num=abs(num)
+while num!=0:
+    num=num//10
+    c=c+1
+print(l)
+
+output:
+
+12345
+5
+
+"""
+
+"""
+e=0
+o=0
+num=int(input())
+num=abs(num)
+while num!=0:
+    r=num%10
+    if num%2==0:
+        e=e+1
+    else:
+        o=o+1
+    num=num//10
+print(e,o)
+if e%2==0 and o%2!=0:
+    print("even odd")
+elif e%2==0 and o%2==0:
+    print("even ")
+elif e%2!=0 and o%2!=0:
+    print("odd")
+elif e%2!=0 and o%2==0:
+    print("not even not odd")
+
+
+output:
+
+1234
+2 2
+even  
+== RESTART: C:/Users/WIN10/AppData/Local/Programs/Python/Python39/sst cls 2.py =
+12345
+2 3
+even odd
+== RESTART: C:/Users/WIN10/AppData/Local/Programs/Python/Python39/sst cls 2.py =
+1235
+1 3
+odd
+== RESTART: C:/Users/WIN10/AppData/Local/Programs/Python/Python39/sst cls 2.py =
+112
+1 2
+not even not odd
+
+"""
+
+"""
+e=0
+o=0
+num=int(input())
+num=abs(num)
+while num!=0:
+    r=num%10
+    if num%2==0:
+        e=e+1
+    else:
+        o=o+1
+    num=num//10
+print(e,o)
+if e%2==0:
+    print("even",end=" ")
+if o%2!=0:
+    print("odd",end=" ")
+if e%2!=0 and o%2==0:
+    print("not even not odd")
+"""
+
+"""
+e=0
+o=0
+num=int(input())
+num=abs(num)
+while num!=0:
+    r=num%10
+    if num%2==0:
+        e=num+e*10
+    else:
+        o=num+o*10
+    num=num//10
+print(e,o)
+
+"""
+"""
+e=0
+o=0
+k=0
+ev=0
+ov=0
+num=int(input())#12345
+num=abs(num)
+while num!=0:#12345 1234 123 12 1
+    r=num%10#5 4 3 2 1
+    if num%2==0:#false true false true false
+        ev=ev*10+r# 42
+    if num%2!=0:#true false true false true
+        ov=ov*10+r#541
+    num=num//10#1234 123 12 1
+print(ev,ov)
+
+
+
+output:
+
+12345
+42 531
+
+"""
+
+"""
+
+num=int(input())
+e=num%2==0
+o=num%2==1
+while num:
+    r=num%10
+    num=num//10
+    if e==True and r%2==1:
+        print("even odd")
+        break
+    if o==True and r%2==0:
+        print("odd even")
+        break
+else:
+    if e:
+        print("EVEN")
+    if o:
+        print("ODD")
+
+
+output;
+
+2468
+EVEN
+
+1357
+ODD
+
+1234
+even odd
+
+2345
+odd even
+
+"""
+"""
+
+
+num=int(input())
+n=num
+ec=0
+oc=0
+tc=0
+while num:
+    r=num%10
+    num=num//10
+    if r%2==0:
+        ec+=1
+    else:
+        oc+=1
+    tc+=1
+if ec==tc:
+    print("Evev")
+if oc==tc:
+    print("Odd")
+else:
+    if ec%2==0:
+        print("Even odd")
+    else:
+        print("Odd even")
+
+
+output;
+
+2468
+EVEN
+
+1357
+ODD
+
+1234
+even odd
+
+2345
+odd even
+
+"""
+
+"""
+n,k=map(int,input().split())
+while n!=0:
+    r=n%10
+    if r==k:
+        print("True")
+        break
+    n=n//10
+else:
+    print("False")
+
+
+output:
+12345 3
+True
+
+12345 6
+False
+
+"""
+
+
