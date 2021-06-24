@@ -1,0 +1,73 @@
+#Given an integer num, repeatedly add all its digits until the result has
+#only one digit, and return it. This works in leet code compiler
+# link for the leetcode
+#https://leetcode.com/problems/add-digits/
+
+
+"""
+class Solution:
+    def addDigits(self, num: int) -> int:
+        def sum_digits(num):
+            res=0
+            while num:
+                r=num%10
+                num=num//10
+                res=res+r
+            return res
+        while True:
+            num=sum_digits(num)
+            if num<10:
+                return num
+
+
+
+output:
+
+199
+
+1
+"""
+#Given an integer n, return true if it is a power of two. Otherwise, return false.
+
+#An integer n is a power of two, if there exists an integer x such that n == 2x.
+# link for the leetcode
+#https://leetcode.com/problems/power-of-two/
+
+
+"""
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        if n<=0:
+            return False
+        elif n==1:
+            return True
+        else:
+            while n>2:
+                if n%2!=0:
+                    return False
+                n=n//2
+            return True
+
+"""
+
+#You have n coins and you want to build a staircase with these coins.
+#The staircase consists of k rows where the ith row has exactly i coins.
+#The last row of the staircase may be incomplete.
+
+#Given the integer n, return the number of complete rows of the staircase
+#you will build.
+
+"""
+
+class Solution:
+    def arrangeCoins(self, n: int) -> int:
+        d=1
+        while True:
+            n=n-d
+            if n==0:
+                return d
+            if n<0:
+                return d-1
+            d+=1
+
+"""
