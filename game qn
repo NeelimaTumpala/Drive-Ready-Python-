@@ -1,0 +1,24 @@
+qn:
+You are playing an online game. In the game list of the N numbers are given. The player has to arrange the numbers so that all the odd numbers of
+all the lists come after the even numbers. Write an algorithm to arrange an given list such that all the odd numbers of the list will come after
+the even numbers?
+
+
+n=int(input())
+a=list(map(int,input().strip().split()))[:n]
+
+for i in a:
+    if(i%2==0):
+        print(i,end=" ")
+for i in a:
+    if(i%2!=0):
+        print(i,end=" ")
+        
+input:
+
+8
+10 93 3 33 12 22 21 11
+
+output:
+
+10 12 22 93 3 33 21 11
